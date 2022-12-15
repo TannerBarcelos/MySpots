@@ -2,24 +2,27 @@ import Link from 'next/link';
 
 const Nav = () => {
   return (
-    <nav className='flex h-16 w-full items-center justify-between px-4'>
-      <Link href='/' className='text-2xl font-semibold'>
-        MySpots
-      </Link>
-      <ul className='flex h-16 w-auto items-center'>
-        <li className='px-4'>
-          <Link href='/'>Home</Link>
-        </li>
-        <li className='px-4'>
-          <Link href='/find'>Find a Spot</Link>
-        </li>
-        <li className='px-4'>
-          <Link href='/signin'>Signin</Link>
-        </li>
-        <li className='px-4'>
-          <Link href='/signup'>Signup</Link>
-        </li>
-      </ul>
+    <nav className='container relative mx-auto p-4'>
+      <div className='flex items-center justify-between'>
+        <Link href='/' className='text-2xl font-semibold'>
+          MySpots
+        </Link>
+        {/* space-x-6 adds 1.5rem space between each link. md:flex says only show this container on medium or larger screens (TW is mobile-first) */}
+        <div className='hidden space-x-6 md:flex'>
+          <Link href='/' className='hover:text-orange-700'>
+            Home
+          </Link>
+          <Link href='/find' className='hover:text-orange-700'>
+            Spots
+          </Link>
+          <Link href='/signin' className='hover:text-orange-700'>
+            Sign In
+          </Link>
+          <Link href='/signup' className='hover:text-orange-700'>
+            Sign Up
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 };
