@@ -2,7 +2,6 @@ import './globals.css';
 import { Nunito_Sans } from '@next/font/google';
 import Nav from './Nav';
 
-//https://nextjs.org/docs/basic-features/font-optimization#usage
 const nunito = Nunito_Sans({
   weight: '400',
 });
@@ -16,7 +15,7 @@ export default function RootLayout({ children }: Props) {
     <html lang='en' className={nunito.className}>
       <head />
       <body>
-        <Nav /> {/* Shared Navbar UI */}
+        <Nav />
         {children}
       </body>
     </html>
